@@ -11,7 +11,11 @@
 </head>
 <body class="bg-danger">
     
-    <h1 class="text-center text-light py-3">Calcola il prezzo del tuo biglietto</h1>
+    <!-- Main Title -->
+    <h1 class="text-uppercase text-center text-light py-3">
+        Calcola il prezzo del tuo biglietto
+    </h1>
+    <!-- /Main Title -->
 
     <!-- Container -->
     <div class="container">
@@ -20,43 +24,49 @@
         <div class="row d-flex">
 
             <!-- Form -->
-            <form class="form-control mb-3" action="">
+            <form class="user-form form-control mb-3" action="">
 
                 <!-- Inner Row -->
                 <div class="row">
 
+                    <!-- Col 1 -->
                     <div class="col-12 col-md-4 d-flex flex-column text-center">
                 
-                        <label class="mb-2 mt-3" for="username">Nome Completo</label>
+                        <label class="mb-2 mt-3 fs-5 fw-semibold" for="username">Nome Completo</label>
                         <input class="form-control" type="text" name="username" id="username" required> 
 
                     </div>
+                    <!-- /Col 1 -->
                     
+                    <!-- Col 2 -->
                     <div class="col-12 col-md-4 d-flex flex-column text-center">
 
-                        <label class="mb-2 mt-3" for="age">Età</label>
+                        <label class="mb-2 mt-3 fs-5 fw-semibold" for="age">Età</label>
                         <input class="form-control" type="number" name="age" id="age" min="1" max="110" required> 
 
                     </div>  
+                    <!-- /Col 2 -->
 
+                    <!-- Col 3 -->
                     <div class="col-12 col-md-4 d-flex flex-column text-center">
 
-                        <label class="mb-2 mt-3" for="km-distance">Km da percorrere</label>
+                        <label class="mb-2 mt-3 fw-semibold" for="km-distance">Km da percorrere</label>
                         <input class="form-control" type="number" name="km-distance" id="km-distance" required>
 
                     </div>
+                    <!-- /Col 3 -->
 
                     <!-- Button Section -->
-                    <div class="py-3 d-flex justify-content-center">
+                    <div class="pt-5 pb-3 d-flex justify-content-center">
 
-                        <button class="btn btn-primary mx-2" type="submit">Calcola</button>
-                        <button class="btn btn-danger undo-btn mx-2" type="reset">Annulla</button>
+                        <button class="btn btn-confirm btn-primary mx-3" type="submit">Calcola</button>
+                        <button class="btn btn-danger btn-undo mx-3" type="reset">Annulla</button>
 
                     </div>
                     <!-- /Button Section -->
 
                 </div>
-                <!-- Inner Row -->
+                <!-- /Inner Row -->
 
             </form>
             <!-- /Form -->
@@ -64,48 +74,72 @@
         </div>    
         <!-- /Row -->
 
+        <!-- Ticket -->
+        <div class="ticket-container pb-3">
+
+            <!-- Section Title -->
             <h2 class="text-center text-light py-3">Il tuo biglietto</h2>
+            <!-- /Section Title -->
 
             <!-- Row -->
-            <div class="row text-center text-md-start bg-white p-3">
+            <div class="row text-center text-md-start bg-white p-3 rounded">
 
+                <!-- Ticket Title -->
                 <h3 class="px-0">Dettaglio Passeggeri</h3>
+                <!-- /Ticket Title -->
 
-                <div class="col-12 border border-end-0">
+                <!-- Col -->
+                <div class="col-12">
 
-                    <div class="row d-flex">
+                    <!-- Inner Row -->
+                    <div class="row border border-black border-2 border-start-0 border-end-0">
 
+                        <!-- Col 1 -->
                         <div class="col-12 col-md-4 bg-secondary pb-5 pt-2">
-                            <div class="fw-bold fs-3 text-nowrap">Nome Passeggero</div>
-                            <div class="user-out"></div>
+                            <div class="fw-bold fs-4 text-nowrap">Nome Passeggero</div>
+                            <div class="user-out fw-bold"></div>
                         </div>
+                        <!-- /ol 1 -->
 
-                        <div class="col-12 col-md-2 pb-3 pt-3">
-                            <div class="fw-bold fs-5">Offerta</div>
+                        <!-- Col 2 -->
+                        <div class="col-12 col-md-2 pb-3 pt-3 d-flex flex-column justify-content-between">
+                            <div class="fw-bold">Offerta</div>
                             <div class="ticket-type"></div>
                         </div>
+                        <!-- /Col 2 -->
 
-                        <div class="col-12 col-md-2 pb-3 pt-3">
-                            <div class="fw-bold fs-5">Carrozza</div>
+                        <!-- Col 3 -->
+                        <div class="col-12 col-md-2 pb-3 pt-3 d-flex flex-column justify-content-between">
+                            <div class="fw-bold">Carrozza</div>
                             <div class="carriage"></div>
                         </div>
+                        <!-- /Col 3 -->
 
-                        <div class="col-12 col-md-2 pb-3 pt-3">
-                            <div class="fw-bold fs-5">Codice CP</div>
+                        <!-- Col 4 -->
+                        <div class="col-12 col-md-2 pb-3 pt-3 d-flex flex-column justify-content-between">
+                            <div class="fw-bold">Codice CP</div>
                             <div class="cp-code"></div>
                         </div>
+                        <!-- /Col 4 -->
 
-                        <div class="col-12 col-md-2 pb-3 pt-3">
-                            <div class="fw-bold fs-5">Costo biglietto</div>
+                        <!-- Col 5 -->
+                        <div class="col-12 col-md-2 pb-3 pt-3 d-flex flex-column justify-content-between">
+                            <div class="fw-bold text-nowrap">Costo biglietto</div>
                             <div class="price"></div>
                         </div>
+                        <!-- /Col 5 -->
 
                     </div>
+                    <!-- /Inner Row -->
 
                 </div>
+                <!-- /Col -->
 
             </div>
             <!-- /Row -->
+
+        </div>
+        <!-- /Ticket -->
 
     </div>
     <!-- Container -->
