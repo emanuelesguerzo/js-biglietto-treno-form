@@ -1,3 +1,4 @@
+const userElem = document.getElementById("username");
 const ageElem = document.getElementById("age");
 const distanceElem = document.getElementById("km-distance");
 const btnElem = document.querySelector(".btn")
@@ -23,7 +24,4 @@ btnElem.addEventListener("click", function () {
 
     const discountValue = basePrice / 100 * discountPercent;
     const finalPrice = basePrice - discountValue;
-
-    const message = `Abbiamo applicato lo sconto del ${discountPercent}% - ${discountValue.toFixed(2)}€. Quindi il tuo prezzo finale e' di ${finalPrice.toFixed(2)}€`
-    console.log(message);
 })
