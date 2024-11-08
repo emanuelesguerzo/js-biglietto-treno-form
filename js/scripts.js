@@ -1,4 +1,4 @@
-const formElem = document.querySelector(".user-form")
+const formElem = document.querySelector(".user-form");
 const userElem = document.getElementById("username");
 const ageElem = document.getElementById("age");
 const distanceElem = document.getElementById("km-distance");
@@ -9,7 +9,7 @@ const ticketElem = document.querySelector(".ticket-type");
 const carriageElem = document.querySelector(".carriage");
 const cpElem = document.querySelector(".cp-code");
 const priceElem = document.querySelector(".price");
-const containerElem = document.querySelector(".ticket-container")
+const containerElem = document.querySelector(".ticket-container");
 
 formElem.addEventListener("submit", function(event) {
     event.preventDefault();
@@ -32,19 +32,19 @@ formElem.addEventListener("submit", function(event) {
         discountPercent = 0;
     }
 
-    let discountMessage = "";
+    let discountMessage;
     if (userAge < 18) {
         discountMessage = `Biglietto Ridotto`;
     } else if (userAge >= 65) {
         discountMessage = `Biglietto Senior`;
     } else {
         discountMessage = `Biglietto Standard`;
-    }
+    };
 
     const discountValue = basePrice / 100 * discountPercent;
     const finalPrice = basePrice - discountValue;
 
-    containerElem.classList.remove("d-none")
+    containerElem.classList.remove("d-none");
     nameElem.innerHTML = username;
     ticketElem.innerHTML = discountMessage;
     carriageElem.innerHTML = randomNum(1, 9);
